@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { TeamPage } from './pages/TeamPage';
 import { MatchPage } from './pages/MatchPage';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
