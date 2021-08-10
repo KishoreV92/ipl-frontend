@@ -50,10 +50,14 @@ export const TeamPage = () => {
       </div>
       <div className="match-detail-section">
         <h3>Latest Matches</h3>
-        <MatchDetailCard teamName={team.teamName} match={team.matches[0]} />
+        <MatchDetailCard
+          key={team.matches[0].id}
+          teamName={team.teamName}
+          match={team.matches[0]}
+        />
       </div>
       {team.matches.slice(1).map(match => (
-        <MatchSmallCard teamName={team.teamName} match={match} />
+        <MatchSmallCard key={match.id} teamName={team.teamName} match={match} />
       ))}
       <div className="more-link">
         <Link to={`/teams/${teamName}/matches/2020`}>More {'>>'}</Link>
